@@ -1,0 +1,16 @@
+port:
+    # default port name
+    name:	    com12
+    baud_rate:  115200
+    data_bits:  8
+    # StopBits: One or 1, Two or 2, OnePointFive or 3
+    stop_bits:  one
+    # parity: Odd, Even, None, Mark, Space
+    parity:     none
+    new_line:   "\n"
+
+call_and_responses:
+- call:     "Hello"
+  response: "World"
+- call:     "Nullpo"
+  response: "Ga"
