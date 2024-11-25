@@ -22,7 +22,7 @@ SerialPort port = new(config.Port.Name, config.Port.BaudRate, config.Port.Parity
 port.DataReceived += (sender, e) =>
 {
     string str = port.ReadLine();
-    Console.WriteLine(str);
+    Console.WriteLine(DateTimeOffset.Now.LocalDateTime.ToString("HH:mm:ss.fff") + " " + str);
     foreach (var cr in config.CallAndResponses)
     {
         if (str.Contains(cr.Call))
